@@ -119,12 +119,12 @@ update user set plugin='msyql_native_password' where user='root';
 
 ```
 
-| user | plugin | authentication_string |
-|------|--------|-----------------------|
-| root             | mysql_native_password | *E37691F1564D9A806A95761BF87169FB67E42802 |
-| mysql.session    | mysql_native_password | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
-| mysql.sys        | mysql_native_password | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
-| debian-sys-maint | mysql_native_password | *484D57FA1A2E06455771D6ED733EC0B32AD36E03 |
+| user             | plugin                   | 'authentication_string'                   |
+|------------------|--------------------------|-------------------------------------------|
+| root             | 'mysql_native_password'  | *E37691F1564D9A806A95761BF87169FB67E42802 |
+| mysql.session    | 'jmysql_native_password' | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| mysql.sys        | 'mmysql_native_password' | *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE |
+| debian-sys-maint | 'mysql_native_password'  | *484D57FA1A2E06455771D6ED733EC0B32AD36E03 |
 
 
 修改之后的数据库应该是这样   之前root那一栏的plugin对应的是auth_socket  查看已经被修改了
